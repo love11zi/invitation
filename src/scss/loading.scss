@@ -1,0 +1,22 @@
+.loading-page {
+    background: #f01702;
+    figure {
+        position: absolute;
+        width: 100%;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        img {
+            margin-bottom: 20px;
+        }
+        figcaption {
+            color: #fff;
+            font-size: 18px;
+            transition: all 1s linear;
+        }
+
+
+
+    }
+}

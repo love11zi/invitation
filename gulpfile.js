@@ -10,10 +10,7 @@
   var connect = require('gulp-connect');
 
   /** 中间件，路由代理，主要用来做mock切换，如将/api的请求代理到m-p环境上去 **/
-  var fs = require('fs');
   var path = require('path');
-  var url = require('url');
-  var proxy = require('proxy-middleware');
 
   /** sass编译 **/
   var sass = require('gulp-sass');
@@ -137,8 +134,6 @@
       .pipe(rename(function (path) {
         path.basename += ".min";
       }))
-      // 为压缩后的js中所有路径引用的js路径添加min,注意未压缩的路径中一定要以.js结尾
-      .pipe(replace(/(["'][\.\s\w/-]*)(\.js)(\s*["'])/gmi, "$1.min$2$3")) 
       .pipe(uglify({mangle: {except: ['require']}}))
       .pipe(gulp.dest(jsPath));
   });

@@ -1,0 +1,84 @@
+.photo-page {
+  position: relative;
+  background: #333;
+}
+
+.photo-page .photo-wall img {
+  display: block;
+  border: 10px solid #fff;
+  box-shadow: 1px 1px 3px #999;
+  position: absolute;
+  transform-origin: left top;
+  transition: all 0.5s linear;
+  z-index: 1;
+  width: 100%;
+}
+
+.photo-page .photo-wall img:nth-of-type(1) {
+  top: 20%;
+  left: 25%;
+  transform: rotate(-4deg) scale(0.4) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:nth-of-type(2) {
+  top: 16%;
+  left: 55%;
+  transform: rotate(7deg) scale(0.36) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:nth-of-type(3) {
+  top: 17%;
+  left: 81%;
+  transform: rotate(-24deg) scale(0.44) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:nth-of-type(4) {
+  top: 47%;
+  left: 21%;
+  transform: rotate(16deg) scale(0.5) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:nth-of-type(5) {
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: rotate(360deg) scale(0.44) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:nth-of-type(6) {
+  top: 58%;
+  left: 77%;
+  transform: rotate(-10deg) scale(0.5) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:nth-of-type(7) {
+  top: 37%;
+  left: 77%;
+  transform: rotate(13deg) scale(0.46) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:nth-of-type(8) {
+  top: 70%;
+  left: 20%;
+  transform: rotate(20deg) scale(0.46) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:nth-of-type(9) {
+  top: 83%;
+  left: 47%;
+  transform: rotate(-8deg) scale(0.5) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:nth-of-type(10) {
+  top: 79%;
+  left: 82%;
+  z-index: 0;
+  transform: rotate(10deg) scale(0.36) translateX(-50%) translateY(-50%);
+}
+
+.photo-page .photo-wall img:hover {
+  top: 50%;
+  left: 50%;
+  transform: rotate(0deg) scale(1) translateX(-50%) translateY(-50%);
+  z-index: 3;
+}
