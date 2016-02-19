@@ -9,19 +9,34 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="applicable-device"content="mobile">
-    <link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <section class="page-ctn">
-        <section class="page canvas-page animated" id="canvas-page">
-            <canvas class="canvas"></canvas>
-            <div class="bottom-txt invisible" id="canvas-bottom-txt">
-                <p class="flipOutX animated" id="canvas-bottom-p">故事刚刚开始，未完待续<span class="dotting"></span></p>
-                <em class="lightSpeedOut animated" id="canvas-bottom-em">Written By : 林阳&江婷婷</em>
+        <section class="page slide-page slide-page-3 page-active">
+            <h1 class="flipOutY animated">我们<span>の</span>相守</h1>
+
+            <div class="rotateOutDownRight poem1 animated">
+                <img src="../img/poem-nanjing1.png" >
             </div>
+
+            <div class="rotateOutDownLeft poem2 animated">
+                <img src="../img/poem-nanjing2.png" >
+            </div>
+
+            <div class="zoomOutDown us animated">
+                <i class="tt"><img src="../img/tt.png"></i>
+                <i class="yy"><img src="../img/yy.png"></i>
+            </div>
+
+            <div class="slideOutUp city animated">
+                <img src="../img/nanjing.png">
+            </div>
+            
         </section>
     </section>
+	
     <script type="text/javascript" src="http://img4.tuniucdn.com/mj/2016020404/lib/seajs/1.3.1/sea.js,config/config.min.js"></script>
 
     <!-- <script type="text/javascript" src="../js/hammer.js"></script> -->
@@ -35,9 +50,7 @@
             isPageLoaded = true;
         };
 
-        // seajs.use(["../js/index.js"],function(i){i.init()});
+        seajs.use(["../js/slide.js"],function(i){i.init()});
     </script>
-
-    <script type="text/javascript" src="../js/canvas.js"></script>
 </body>
 </html>

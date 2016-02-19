@@ -25,6 +25,18 @@ var S = {
     S.Drawing.loop(function () {
       S.Shape.render();
     });
+
+    setTimeout(function(){
+      document.getElementById('canvas-bottom-txt').className = "bottom-txt";
+    }, 14000);
+
+    setTimeout(function(){
+      document.getElementById('canvas-bottom-p').className = "flipInX animated";
+    }, 15000);
+
+    setTimeout(function(){
+      document.getElementById('canvas-bottom-em').className = "lightSpeedIn animated";
+    }, 17000);
   }
 };
 

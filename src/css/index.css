@@ -128,6 +128,364 @@ html, body {
   transition: all 1s linear;
 }
 
+.slide-page {
+  position: relative;
+  font-family: "Microsoft Yahei";
+}
+
+.slide-page-1 {
+  background: #81d8d0;
+}
+
+.slide-page-1 h1 {
+  visibility: hidden;
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 3px #666;
+}
+
+.slide-page-1 h1 span {
+  margin: 0 3px;
+  color: #f60;
+}
+
+.slide-page-1 .poem {
+  visibility: hidden;
+  position: absolute;
+  top: 100px;
+  right: 39%;
+  transform: translateX(50%);
+}
+
+.slide-page-1 .poem img {
+  width: 60%;
+}
+
+.slide-page-1 .us {
+  visibility: hidden;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+}
+
+.slide-page-1 .us .yy {
+  position: absolute;
+  bottom: -50px;
+  left: 0%;
+  transform: translateX(-100%);
+  transition: left 1s ease-out, bottom 1s ease-out;
+  z-index: 1;
+}
+
+.slide-page-1 .us .yy img {
+  width: 60px;
+}
+
+.slide-page-1 .us .tt {
+  position: absolute;
+  bottom: -50px;
+  right: 0%;
+  transform: translateX(100%);
+  transition: right 1s ease-out, bottom 1s ease-out;
+  z-index: 1;
+}
+
+.slide-page-1 .us .tt img {
+  width: 60px;
+}
+
+.slide-page-1 .city {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.slide-page-1 .city img {
+  width: 100%;
+}
+
+.slide-page-1 .city h2 {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.slide-page-1.page-active h1.active {
+  visibility: visible;
+}
+
+.slide-page-1.page-active .poem.active {
+  visibility: visible;
+}
+
+.slide-page-1.page-active .us.active {
+  visibility: visible;
+}
+
+.slide-page-1.page-active .us.active .yy {
+  left: 50%;
+  bottom: 0;
+}
+
+.slide-page-1.page-active .us.active .tt {
+  right: 50%;
+  bottom: 0;
+}
+
+.slide-page-1.page-active .city.active {
+  visibility: visible;
+}
+
+.slide-page-2 {
+  background: #f3e09b;
+}
+
+.slide-page-2 h1 {
+  visibility: hidden;
+  position: absolute;
+  left: 30px;
+  top: 40%;
+  color: #fff;
+  font-size: 40px;
+  line-height: 50px;
+  transform: translateY(-50%);
+  text-shadow: 1px 1px 3px #666;
+}
+
+.slide-page-2 h1 span {
+  color: #f60;
+}
+
+.slide-page-2 .poem {
+  visibility: hidden;
+  position: absolute;
+  top: 24%;
+  right: 13.5%;
+  text-align: right;
+}
+
+.slide-page-2 .poem img {
+  width: 60%;
+}
+
+.slide-page-2 .us {
+  visibility: hidden;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-page-2 .us .yy {
+  position: absolute;
+  left: 33%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s linear, left 1s 1s ease-out, top 1s 1s ease-out, transform 1s 1s ease-out;
+  z-index: 1;
+}
+
+.slide-page-2 .us .yy img {
+  width: 60px;
+}
+
+.slide-page-2 .us .tt {
+  position: absolute;
+  left: 33%;
+  bottom: 50%;
+  opacity: 0;
+  transform: translateX(100%) translateY(50%);
+  transition: opacity 0.5s linear, left 1s 1s ease-out, bottom 1s 1s ease-out, transform 1s 1s ease-out;
+  z-index: 1;
+}
+
+.slide-page-2 .us .tt img {
+  width: 60px;
+}
+
+.slide-page-2 .city1 {
+  visibility: hidden;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.slide-page-2 .city1 img {
+  width: 100%;
+}
+
+.slide-page-2 .city2 {
+  visibility: hidden;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+.slide-page-2 .city2 img {
+  width: 100%;
+  transform: rotate(-180deg);
+}
+
+.slide-page-2.page-active h1.active {
+  visibility: visible;
+}
+
+.slide-page-2.page-active .poem.active {
+  visibility: visible;
+}
+
+.slide-page-2.page-active .us.active {
+  visibility: visible;
+}
+
+.slide-page-2.page-active .us.active .yy {
+  top: 18%;
+  transform: translateY(-50%) rotate(-180deg);
+  opacity: 1;
+}
+
+.slide-page-2.page-active .us.active .tt {
+  bottom: 24%;
+  transform: translateX(0%) translateY(50%);
+  opacity: 1;
+}
+
+.slide-page-2.page-active .city1.active {
+  visibility: visible;
+}
+
+.slide-page-2.page-active .city2.active {
+  visibility: visible;
+}
+
+.slide-page-3 {
+  background: #fedfe1;
+}
+
+.slide-page-3 h1 {
+  visibility: hidden;
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 3px #666;
+}
+
+.slide-page-3 h1 span {
+  margin: 0 3px;
+  color: #f60;
+}
+
+.slide-page-3 .poem1 {
+  visibility: hidden;
+  position: absolute;
+  top: 100px;
+  right: 0%;
+  text-align: right;
+}
+
+.slide-page-3 .poem1 img {
+  width: 70%;
+}
+
+.slide-page-3 .poem2 {
+  visibility: hidden;
+  position: absolute;
+  top: 100px;
+  left: 2%;
+}
+
+.slide-page-3 .poem2 img {
+  width: 70%;
+}
+
+.slide-page-3 .us {
+  visibility: hidden;
+  position: absolute;
+  bottom: 36%;
+  left: 0;
+  width: 100%;
+}
+
+.slide-page-3 .us .yy {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+.slide-page-3 .us .yy img {
+  width: 60px;
+}
+
+.slide-page-3 .us .tt {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(100%);
+  z-index: 1;
+}
+
+.slide-page-3 .us .tt img {
+  width: 60px;
+}
+
+.slide-page-3 .city {
+  visibility: hidden;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.slide-page-3 .city img {
+  width: 100%;
+}
+
+.slide-page-3 .city h2 {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.slide-page-3.page-active h1.active {
+  visibility: visible;
+}
+
+.slide-page-3.page-active .poem1.active {
+  visibility: visible;
+}
+
+.slide-page-3.page-active .poem2.active {
+  visibility: visible;
+}
+
+.slide-page-3.page-active .us.active {
+  visibility: visible;
+}
+
+.slide-page-3.page-active .city.active {
+  visibility: visible;
+}
+
 .photo-page {
   position: relative;
   background: #e0e0e0;
@@ -147,64 +505,64 @@ html, body {
 .photo-page .photo-wall img:nth-of-type(1) {
   top: 22%;
   left: 25%;
-  transform: rotate(-4deg) scale(0.4) translateX(-50%) translateY(-50%);
+  transform: rotate(-4deg) scale(0.36) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(2) {
   top: 18%;
   left: 55%;
-  transform: rotate(7deg) scale(0.36) translateX(-50%) translateY(-50%);
+  transform: rotate(7deg) scale(0.32) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(3) {
   top: 19%;
   left: 81%;
-  transform: rotate(-24deg) scale(0.44) translateX(-50%) translateY(-50%);
+  transform: rotate(-24deg) scale(0.4) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(4) {
   top: 49%;
   left: 21%;
-  transform: rotate(16deg) scale(0.5) translateX(-50%) translateY(-50%);
+  transform: rotate(16deg) scale(0.46) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(5) {
   top: 51%;
   left: 50%;
   z-index: 2;
-  transform: rotate(360deg) scale(0.4) translateX(-50%) translateY(-50%);
+  transform: rotate(360deg) scale(0.34) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(6) {
   top: 60%;
   left: 77%;
-  transform: rotate(-10deg) scale(0.5) translateX(-50%) translateY(-50%);
+  transform: rotate(-10deg) scale(0.46) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(7) {
   top: 39%;
   left: 77%;
-  transform: rotate(13deg) scale(0.46) translateX(-50%) translateY(-50%);
+  transform: rotate(13deg) scale(0.42) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(8) {
   top: 72%;
   left: 20%;
-  transform: rotate(20deg) scale(0.46) translateX(-50%) translateY(-50%);
+  transform: rotate(20deg) scale(0.42) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(9) {
   top: 85%;
   left: 47%;
   z-index: 0;
-  transform: rotate(-8deg) scale(0.5) translateX(-50%) translateY(-50%);
+  transform: rotate(-8deg) scale(0.46) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(10) {
   top: 81%;
-  left: 82%;
+  left: 80%;
   z-index: 0;
-  transform: rotate(10deg) scale(0.36) translateX(-50%) translateY(-50%);
+  transform: rotate(10deg) scale(0.3) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img.active {
@@ -237,27 +595,8 @@ html, body {
   line-height: 1.5em;
   -webkit-perspective: 1000;
   -webkit-perspective-origin-y: 25%;
-}
-
-.canvas-page h1 {
-  color: #111;
-  margin: 0 0 12px 0;
-  font-size: 24px;
-  line-height: 1.5em;
-}
-
-.canvas-page p {
-  margin: 0 0 10x 0;
-}
-
-.canvas-page a {
-  color: #888;
-  text-decoration: none;
-  border-bottom: 1px solid #ccc;
-}
-
-.canvas-page a:hover {
-  border-bottom-color: #888;
+  /* IE8 */
+  /* IE9+,FF,CH,OP,SF */
 }
 
 .canvas-page.body--ready {
@@ -283,4 +622,62 @@ html, body {
   -ms-transition: -ms-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
   -o-transition: -o-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
   transition: transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+
+.canvas-page .bottom-txt {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: #fff;
+  font-family: "Microsoft Yahei";
+  text-shadow: 1px 1px 3px #666;
+}
+
+.canvas-page .bottom-txt.invisible {
+  visibility: hidden;
+}
+
+.canvas-page .bottom-txt p {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.canvas-page .bottom-txt em {
+  display: block;
+  font-size: 16px;
+}
+
+.canvas-page .dotting {
+  display: inline-block;
+  min-width: 2px;
+  min-height: 2px;
+  box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor;
+  -webkit-animation: dot 3s infinite step-start both;
+  animation: dot 3s infinite step-start both;
+  *zoom: expression(this.innerHTML = '...');
+  /* IE7 */
+}
+
+.canvas-page .dotting:before {
+  content: '...';
+}
+
+.canvas-page .dotting::before {
+  content: '';
+}
+
+.canvas-page :root .dotting {
+  margin-right: 8px;
+}
+
+@keyframes dot {
+  25% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 2px 0 currentColor;
+  }
+  75% {
+    box-shadow: 2px 0 currentColor, 6px 0 currentColor;
+  }
 }
