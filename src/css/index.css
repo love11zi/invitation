@@ -130,13 +130,13 @@ html, body {
 
 .photo-page {
   position: relative;
-  background: #333;
+  background: #e0e0e0;
 }
 
 .photo-page .photo-wall img {
   display: block;
   border: 10px solid #fff;
-  box-shadow: 1px 1px 3px #999;
+  box-shadow: 10px 10px 10px #333;
   position: absolute;
   transform-origin: left top;
   transition: all 0.5s linear;
@@ -145,72 +145,88 @@ html, body {
 }
 
 .photo-page .photo-wall img:nth-of-type(1) {
-  top: 20%;
+  top: 22%;
   left: 25%;
   transform: rotate(-4deg) scale(0.4) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(2) {
-  top: 16%;
+  top: 18%;
   left: 55%;
   transform: rotate(7deg) scale(0.36) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(3) {
-  top: 17%;
+  top: 19%;
   left: 81%;
   transform: rotate(-24deg) scale(0.44) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(4) {
-  top: 47%;
+  top: 49%;
   left: 21%;
   transform: rotate(16deg) scale(0.5) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(5) {
-  top: 50%;
+  top: 51%;
   left: 50%;
   z-index: 2;
-  transform: rotate(360deg) scale(0.44) translateX(-50%) translateY(-50%);
+  transform: rotate(360deg) scale(0.4) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(6) {
-  top: 58%;
+  top: 60%;
   left: 77%;
   transform: rotate(-10deg) scale(0.5) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(7) {
-  top: 37%;
+  top: 39%;
   left: 77%;
   transform: rotate(13deg) scale(0.46) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(8) {
-  top: 70%;
+  top: 72%;
   left: 20%;
   transform: rotate(20deg) scale(0.46) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(9) {
-  top: 83%;
+  top: 85%;
   left: 47%;
+  z-index: 0;
   transform: rotate(-8deg) scale(0.5) translateX(-50%) translateY(-50%);
 }
 
 .photo-page .photo-wall img:nth-of-type(10) {
-  top: 79%;
+  top: 81%;
   left: 82%;
   z-index: 0;
   transform: rotate(10deg) scale(0.36) translateX(-50%) translateY(-50%);
 }
 
-.photo-page .photo-wall img:hover {
+.photo-page .photo-wall img.active {
   top: 50%;
   left: 50%;
   transform: rotate(0deg) scale(1) translateX(-50%) translateY(-50%);
+  z-index: 50;
+}
+
+.photo-page .photo-mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
   z-index: 3;
+}
+
+.photo-page .photo-mask.active {
+  display: block;
 }
 
 .canvas-page {

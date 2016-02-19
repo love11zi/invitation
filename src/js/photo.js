@@ -1,54 +1,30 @@
 define(function(require, exports, module){
     var $ = require('zepto');
-    var Hammer = require("hammer");
 
     var page = {
         init: function(){
-            this.loading();
+            this.photoShow();
         },
-        loading: function(){
-            var loadingPage = $('.loading-page'),
-                loadingGif = loadingPage.find('img'),
-                loadingStatusCtn = loadingPage.find('.loading-status'),
-                percent = 0;
+        photoShow: function(){
+            var photoPage = $('.photo-page'),
+                photos = photoPage.find('img'),
+                mask = photoPage.find('.photo-mask');
 
-            function showEntry(){
-                percent = 100;
-                loadingStatusCtn.text(percent + '%');
-                loadingStatusCtn.addClass('fadeOut');
-                setTimeout(function(){
-                    loadingStatusCtn.text('Feel My Heart');
-                    loadingStatusCtn.removeClass('fadeOut').addClass('fadeIn page-entry');
-                }, 1000);
-            }
+            photos.on("click", function(){
+                var $this = $(this);
 
-            var count = function(){
-                if (percent < 100) {
-                    percent ++;
-                    loadingStatusCtn.text(percent + '%');
-                    setTimeout(count, 100);
-                }
-            };
-
-            count();
-
-            if (window.isPageLoaded){
-                showEntry();
-            }
-
-            $(window).on("load", showEntry);
-
-            loadingGif.on("click", function(){
-                if(loadingStatusCtn.hasClass('fadeIn')){
-                    loadingPage.addClass('fadeOut');   
+                if($this.hasClass('active')){
+                    $this.removeClass('active');
+                    mask.removeClass('active');
+                } else {
+                    $this.addClass('active');
+                    mask.addClass('active');
                 }
             });
 
-            var hammertime = new Hammer.Manager(loadingPage.get(0));
-
-            hammertime.add(new Hammer.Swipe());
-            hammertime.on("swipeup", function(){
-                alert("swipeup")
+            mask.on("click", function(){
+                $(this).removeClass('active');
+                photos.removeClass('active');
             });
         }
     };

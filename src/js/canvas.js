@@ -20,7 +20,7 @@ var S = {
     document.getElementById('canvas-page').classList.add('body--ready');
 
    
-    S.UI.simulate('林阳|❤|江婷婷');
+    S.UI.simulate('../img/word1.png|../img/word2.png|../img/word3.png|../img/word4.png|../img/heart.png');
 
     S.Drawing.loop(function () {
       S.Shape.render();
@@ -201,7 +201,8 @@ S.UI = (function () {
           break;
 
         default:
-          S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
+          // S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
+          S.ShapeBuilder.imageFile(current[0] === cmd ? '' : current,S.Shape.switchShape);
       }
     }, 3000, sequence.length);
   }
@@ -337,7 +338,8 @@ S.Dot.prototype = {
     d = this.p.a - this.t.a;
     this.p.a = Math.max(0.1, this.p.a - (d * 0.05));
     d = this.p.z - this.t.z;
-    this.p.z = 2;
+    this.p.z = 3;
+    // this.p.z = Math.max(1, this.p.z - (d * 0.05));
   },
 
   distanceTo: function (n, details) {
@@ -362,11 +364,11 @@ S.Dot.prototype = {
 
 
 S.ShapeBuilder = (function () {
-  var gap = 5,
+  var gap = 8,
       shapeCanvas = document.createElement('canvas'),
       shapeContext = shapeCanvas.getContext('2d'),
       fontSize = 500,
-      fontFamily = 'Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
+      fontFamily = 'Microsoft Yahei, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
 
   function fit() {
     shapeCanvas.width = Math.floor(window.innerWidth / gap) * gap;
@@ -435,7 +437,7 @@ S.ShapeBuilder = (function () {
 
       image.onload = function () {
         shapeContext.clearRect(0, 0, shapeCanvas.width, shapeCanvas.height);
-        shapeContext.drawImage(this, 0, 0, a.h * 0.6, a.h * 0.6);
+        shapeContext.drawImage(this, 0, 0, a.w * 0.4, a.w * 1.375);
         callback(processCanvas());
       };
 
