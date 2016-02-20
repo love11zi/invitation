@@ -1,5 +1,7 @@
 .loading-page {
     background: #f01702;
+    z-index: 100;
+    transform: translateY(0%);
     figure {
         position: absolute;
         width: 100%;
@@ -12,11 +14,8 @@
         }
         figcaption {
             color: #fff;
-            font-size: 18px;
+            font-size: 20px;
             transition: all 1s linear;
         }
-
-
-
     }
 }

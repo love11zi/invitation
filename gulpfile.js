@@ -105,7 +105,7 @@
     gulp.src(path.join(scssPath,'*.scss'))
       .pipe(plumber())
       .pipe(sass({
-        outputStyle: 'expanded'
+        outputStyle: 'compressed'
       }))
       .pipe(autoprefixer({
           browsers: ['> 1%'],

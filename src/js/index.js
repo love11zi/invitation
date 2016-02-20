@@ -16,10 +16,15 @@ define(function(require, exports, module){
                 percent = 100;
                 loadingStatusCtn.text(percent + '%');
                 loadingStatusCtn.addClass('fadeOut');
+
                 setTimeout(function(){
-                    loadingStatusCtn.text('Feel My Heart');
+                    loadingStatusCtn.text('故事即将开始');
                     loadingStatusCtn.removeClass('fadeOut').addClass('fadeIn page-entry');
                 }, 1000);
+                
+                setTimeout(function(){
+                    loadingPage.addClass('fadeOut');
+                }, 2000);
             }
 
             var count = function(){
@@ -38,18 +43,12 @@ define(function(require, exports, module){
 
             $(window).on("load", showEntry);
 
-            loadingGif.on("click", function(){
-                if(loadingStatusCtn.hasClass('fadeIn')){
-                    loadingPage.addClass('fadeOut');   
-                }
-            });
+            // var hammertime = new Hammer.Manager(loadingPage.get(0));
 
-            var hammertime = new Hammer.Manager(loadingPage.get(0));
-
-            hammertime.add(new Hammer.Swipe());
-            hammertime.on("swipeup", function(){
-                alert("swipeup")
-            });
+            // hammertime.add(new Hammer.Swipe());
+            // hammertime.on("swipeup", function(){
+            //     alert("swipeup")
+            // });
         }
     };
 

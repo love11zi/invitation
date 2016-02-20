@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>林阳、江婷婷婚礼邀请</title>
+    <meta name="keywords" content="林阳、江婷婷婚礼邀请" />
+    <meta name="description" content="林阳、江婷婷婚礼邀请" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <section class="page-ctn">
+        <!-- loading page -->
+        <section class="page loading-page animated">
+            <figure>
+                <img src="./img/heart.gif" width="100">
+                <figcaption>
+                    <span class="loading-status animated">0%</span>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="fs-page-list" id="fs-page-list" data-index="1">
+
+            <!-- slide-page-1 -->
+            <section class="page slide-page slide-page-1">
+                <h1 class="bounceOutDown animated">相遇<span>@</span>武汉</h1>
+
+                <div class="poem zoomOut animated">
+                    <img src="./img/poem-wuhan.png">
+                </div>
+
+                <div class="us animated">
+                    <i class="yy"><img src="./img/yy1.png"></i>
+                    <i class="tt"><img src="./img/tt1.png"></i>
+                </div>
+
+                <div class="city fadeOut animated">
+                    <img src="./img/wuhan.png">
+                    <h2>武汉</h2>
+                </div>
+            </section>
+
+            <!-- slide-page-2 -->
+            <section class="page slide-page slide-page-2">
+                <h1 class="zoomOut animated">
+                    上<br>海
+                    <span class="railway">
+                        <img src="./img/train.png">
+                        <span class="distance">1<br>4<br>6<br>3<br>公<br>里</span>
+                    </span>
+                    北<br>京
+                </h1>
+
+                <div class="zoomOutLeft poem animated">
+                    <img src="./img/poem-beijing.png">
+                </div>
+
+                <div class="us">
+                    <i class="yy"><img src="./img/yy2.png"></i>
+                    <i class="tt"><img src="./img/tt1.png"></i>
+                </div>
+
+                <div class="slideOutUp city1 animated">
+                    <img src="./img/beijing.png">
+                </div>
+
+                <div class="slideOutDown city2 animated">
+                    <img src="./img/shanghai.png">
+                </div>
+            </section>
+
+            <!-- slide-page-3 -->
+            <section class="page slide-page slide-page-3">
+                <h1 class="flipOutX animated"><span>@</span>南京</h1>
+
+                <div class="fadeOutRight poem1 animated">
+                    <img src="./img/poem-nanjing1.png">
+                </div>
+
+                <div class="fadeOutLeft poem2 animated">
+                    <img src="./img/poem-nanjing2.png">
+                </div>
+
+                <div class="flipOutY us animated">
+                    <i class="yy"><img src="./img/yy3.png"></i>
+                    <i class="tt"><img src="./img/tt3.png"></i>
+                </div>
+
+                <div class="fadeOut xi animated">囍</div>
+
+                <div class="slideOutUp city animated">
+                    <img src="./img/nanjing.png">
+                </div>
+
+                <canvas id="slide-canvas"></canvas>
+            </section>
+
+            <!-- photo-page -->
+            <section class="page photo-page animated">
+                <div class="photo-wall">
+                    <img src="./img/photo/1.jpg">
+                    <img src="./img/photo/2.jpg">
+                    <img src="./img/photo/3.jpg">
+                    <img src="./img/photo/4.jpg">
+                    <img src="./img/photo/5.jpg">
+                    <img src="./img/photo/6.jpg">
+                    <img src="./img/photo/7.jpg">
+                    <img src="./img/photo/8.jpg">
+                    <img src="./img/photo/9.jpg">
+                    <img src="./img/photo/10.jpg">
+                </div>
+                <div class="photo-mask"></div>
+            </section>
+
+            <!-- canvas-page -->
+            <section class="page canvas-page animated" id="canvas-page">
+                <canvas class="canvas"></canvas>
+                <div class="bottom-txt invisible" id="canvas-bottom-txt">
+                    <p class="flipOutX animated hide" id="canvas-bottom-p">故事刚刚开始，未完待续<span class="dotting"></span>
+                    </p>
+                    <p class="flipOutX animated hide" id="canvas-bottom-p-address"><a href="http://3gimg.qq.com/lightmap/v1/marker/?marker=coord:31.727022,118.364473;title:%E6%AC%A2%E8%BF%8E%E8%8E%85%E4%B8%B4%E6%9E%97%E9%98%B3%E3%80%81%E6%B1%9F%E5%A9%B7%E5%A9%B7%E5%A9%9A%E5%AE%B4;addr:%E5%AE%89%E5%BE%BD%E5%92%8C%E5%8E%BF%E8%8A%B1%E5%9B%AD%E5%A4%A7%E9%85%92%E5%BA%97%203%E6%9C%8826%E6%97%A5%E4%B8%AD%E5%8D%8812%E7%82%B9=&from=singlemessage&isappinstalled=0">婚礼地点</a>
+                    </p>
+                    <em class="lightSpeedOut animated" id="canvas-bottom-em">Written By : 林阳&江婷婷</em>
+                </div>
+            </section>
+        </section>
+        <i class="arrow" id="arrow"></i>
+    </section>
+
+    <script type="text/javascript" src="http://img4.tuniucdn.com/mj/2016020404/lib/seajs/1.3.1/sea.js"></script>
+    <script>
+        seajs.config({
+            base: "http://img1.tuniucdn.com/site/m2015/js/",
+            alias: {
+                "zepto": "lib/zepto/1.1.6/zepto.min.js",
+                "hammer": "plugins/hammer/hammer.min.js"
+            }
+        });
+
+        var isPageLoaded = false;
+
+        window.onload = function() {
+            isPageLoaded = true;
+        };
+
+        seajs.use(["./js/spa.min.js"], function(spa) {
+            spa.init()
+        });
+    </script>
+
+    <audio  style="display:none" loop="loop" autoplay="autoplay">
+        <source src="./audio/wedding.ogg" type="audio/ogg" />
+        <source src="./audio/wedding.mp3" type="audio/mpeg" />
+    </audio>
+</body>
+
+</html>

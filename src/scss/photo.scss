@@ -1,6 +1,10 @@
 .photo-page {
     position: relative; 
     background: #e0e0e0;
+    opacity: 0;
+    &.page-active {
+        opacity: 1;
+    }
     .photo-wall {
         img {
             display: block;
@@ -11,6 +15,7 @@
             transition: all 0.5s linear;
             z-index: 1;
             width: 100%;
+            opacity: 0;
             &:nth-of-type(1){
                 top: 22%;
                 left: 25%;
@@ -74,7 +79,7 @@
     }
     .photo-mask {
         display: none;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -85,4 +90,10 @@
             display: block;
         }
     }
+    &.page-active {
+        .photo-wall img {
+            opacity: 1;
+        }
+    }
 }
+

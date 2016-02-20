@@ -31,8 +31,8 @@
     }
     .bottom-txt {
         position: absolute;
-        bottom: 30px;
-        right: 30px;
+        bottom: 40px;
+        right: 40px;
         color: #fff;
         font-family: "Microsoft Yahei";
         text-shadow: 1px 1px 3px #666;
@@ -40,12 +40,15 @@
             visibility: hidden;
         }
         p {
-            font-size: 20px;
-            margin-bottom: 5px;
+            font-size: 24px;
+        }
+        a {
+            color: #f60;
         }
         em {
             display: block;
-            font-size: 16px;
+            margin-top: 10px;
+            font-size: 18px;
         }
     }
     .dotting {

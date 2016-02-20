@@ -1,26 +1,14 @@
-
-/*
-
-  Shape Shifter
-  =============
-  A canvas experiment by Kenneth Cachia
-  http://www.kennethcachia.com
-
-  Updated code
-  ------------
-  https://github.com/kennethcachia/Shape-Shifter 
-
-*/
-
-
 var S = {
   init: function () {
     
     S.Drawing.init('.canvas');
     document.getElementById('canvas-page').classList.add('body--ready');
 
-   
-    S.UI.simulate('../img/word1.png|../img/word2.png|../img/word3.png|../img/word4.png|../img/heart.png');
+   if(location.hash.indexOf("address") == -1) {
+    S.UI.simulate('our|love|will|go|on|and|on|../img/heart.png');
+   } else {
+    S.UI.simulate('2016|03|26|welcome|to|our|wedding|../img/heart.png');
+   }
 
     S.Drawing.loop(function () {
       S.Shape.render();
@@ -28,15 +16,20 @@ var S = {
 
     setTimeout(function(){
       document.getElementById('canvas-bottom-txt').className = "bottom-txt";
-    }, 14000);
+    }, 22000);
 
     setTimeout(function(){
-      document.getElementById('canvas-bottom-p').className = "flipInX animated";
-    }, 15000);
+      if(location.hash.indexOf("address") == -1) {
+        document.getElementById('canvas-bottom-p').className = "flipInX animated";
+      } else {
+        document.getElementById('canvas-bottom-p-address').className = "flipInX animated";
+      }
+      
+    }, 23000);
 
     setTimeout(function(){
       document.getElementById('canvas-bottom-em').className = "lightSpeedIn animated";
-    }, 17000);
+    }, 24000);
   }
 };
 
@@ -213,8 +206,11 @@ S.UI = (function () {
           break;
 
         default:
-          // S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
-          S.ShapeBuilder.imageFile(current[0] === cmd ? '' : current,S.Shape.switchShape);
+          if (current[0] == '.') {
+             S.ShapeBuilder.imageFile(current,S.Shape.switchShape);
+          } else {
+            S.Shape.switchShape(S.ShapeBuilder.letter(current));
+          }
       }
     }, 3000, sequence.length);
   }
@@ -350,7 +346,7 @@ S.Dot.prototype = {
     d = this.p.a - this.t.a;
     this.p.a = Math.max(0.1, this.p.a - (d * 0.05));
     d = this.p.z - this.t.z;
-    this.p.z = 3;
+    this.p.z = 2;
     // this.p.z = Math.max(1, this.p.z - (d * 0.05));
   },
 
@@ -376,11 +372,11 @@ S.Dot.prototype = {
 
 
 S.ShapeBuilder = (function () {
-  var gap = 8,
+  var gap = 5,
       shapeCanvas = document.createElement('canvas'),
       shapeContext = shapeCanvas.getContext('2d'),
       fontSize = 500,
-      fontFamily = 'Microsoft Yahei, Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
+      fontFamily = 'Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
 
   function fit() {
     shapeCanvas.width = Math.floor(window.innerWidth / gap) * gap;
@@ -613,4 +609,3 @@ S.Shape = (function () {
 }());
 
 
-S.init();
